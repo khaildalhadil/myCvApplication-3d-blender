@@ -1,6 +1,6 @@
 import { useFrame, useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 
 import coffeeSmokeVertexShader from '../shaders/vertex.glsl';
 import coffeeSmokeFregmentShader from '../shaders/fregment.glsl';
@@ -32,7 +32,7 @@ export default function CoffeeSmoke() {
     
     <mesh
       ref={meshRef}
-      position={[-1.16, -.4, 0.84]}
+      position={[.85, -1, 2.34]}
     >
       <planeGeometry
         args={[1, 1, 16, 64]}
