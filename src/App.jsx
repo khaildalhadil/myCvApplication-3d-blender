@@ -1,6 +1,8 @@
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
+import { Html } from '@react-three/drei'
+import Loader from './components/Loader.jsx'
 
 export default function App() {
   const [ showGoBack , setShowGoBack] = useState(false)
@@ -20,10 +22,11 @@ export default function App() {
       <Canvas className='r3f' camera={{ 
         position: [1, 1, 1],
         fov: 45, rotation: [0, .5, 0] 
-        }}
-        >
-        <Experience handleChangeGoBack={handleChangeGoBack} goBack={goBack} setGoBack={setGoBack} />
-        
+        }}>
+          
+        <Suspense fallback={<Html><Loader /></Html>}>
+          <Experience handleChangeGoBack={handleChangeGoBack} goBack={goBack} setGoBack={setGoBack} />
+        </Suspense>
       </Canvas >
       
       {showGoBack && 
