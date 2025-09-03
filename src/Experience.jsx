@@ -238,6 +238,8 @@ export default function Experience({handleChangeGoBack, goBack, setGoBack})
           onClick={handleKeyBoardClick}
           font='bangers-v20-latin-regular.woff'
           fontSize={.3}
+          // onPointerEnter={()=> document.body.style.cursor ="pointer"}
+          // onPointerLeave={()=> document.body.style.cursor ="default"}
           color="#fff"
           onPointerOver={() => setHavered(true)}
           onPointerOut={() => setHavered(false)}

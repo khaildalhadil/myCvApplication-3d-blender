@@ -7,13 +7,8 @@ export default function Loader() {
     //   width: `${progress}%`,
     // }}
   return (
-    <div className="loader">
-      <div className="cup">
-        <div className="handle"></div>
-        <p className="progress">
-          {progress} <span>%</span>
-        </p>
-      </div>
+    <div className="loading">
+      <h1 className="text-gray-50 ">Loadding...</h1>
     </div>
   )
 }
